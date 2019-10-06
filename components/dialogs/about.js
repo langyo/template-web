@@ -37,6 +37,8 @@ class About extends React.Component {
         open={this.props.show}
         onClose={this.props.onClose}
         scroll='paper'
+        fullWidth
+        maxWidth='sm'
       >
         <DialogTitle>关于</DialogTitle>
         <DialogContent>

@@ -28,9 +28,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
-  content: {
-    width: 400
-  },
   formControl: {
     margin: theme.spacing(2),
     minWidth: 150,
@@ -61,7 +58,7 @@ class Setting extends React.Component {
         scroll='paper'
       >
         <DialogTitle>设置</DialogTitle>
-        <DialogContent className={classes.content}>
+        <DialogContent>
           <FormLabel>显示</FormLabel>
           <FormGroup>
             <FormControlLabel

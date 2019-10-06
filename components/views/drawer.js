@@ -18,9 +18,6 @@ const styles = theme => ({
     width: 240,
     opacity: 0.9,
   },
-  toolbar: {
-    marginTop: 30
-  },
   line: {
     marginTop: theme.spacing(0.5),
     marginBottom: theme.spacing(0.5)
@@ -49,7 +46,6 @@ class MainDrawer extends React.Component {
         className={classes.list}
         variant={'temporary'}
       >
-        <div className={classes.toolbar} />
         <List className={classes.list}>
           {this.props.items.map((n, index) => {
             // Divider

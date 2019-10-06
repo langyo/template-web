@@ -22,10 +22,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 
+import config from '../../configs/initTheme';
+
 const styles = theme => ({
-  content: {
-    width: 400
-  },
   text: {
     marginLeft: 20
   }
@@ -54,9 +53,11 @@ class Theme extends React.Component {
         open={this.props.show}
         onClose={this.props.onClose}
         scroll='paper'
+        fullWidth
+        maxWidth='sm'
       >
         <DialogTitle>主题</DialogTitle>
-        <DialogContent className={classes.content}>
+        <DialogContent>
           <Tabs
             value={this.state.selecting}
             onChange={this.onChangeChoser}
@@ -69,35 +70,7 @@ class Theme extends React.Component {
           </Tabs>
           <List>
             {
-              [
-                {
-                  color: '#39C5BB',
-                  name: "初音绿"
-                },
-                {
-                  color: '#FFA500',
-                  name: "镜音铃橙"
-                },
-                {
-                  color: '#FFE211',
-                  name: "镜音连黄"
-                },
-                {
-                  color: '#FAAFBE',
-                  name: "巡音粉"
-                },
-                {
-                  color: '#66CCFF',
-                  name: "天依蓝"
-                },
-                {
-                  color: '#99FFFF',
-                  name: "言和青"
-                },
-                {
-                  color: '#EE0000',
-                  name: "正绫红"
-                }].map(n => {
+              config.themes.map(n => {
                   let onClick, selecting;
                   switch(this.state.selecting) {
                     case 0:

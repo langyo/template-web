@@ -1,3 +1,5 @@
+import themeConfig from './initTheme';
+
 export default {
   views: {
     drawer: {
@@ -13,10 +15,7 @@ export default {
     theme: {
       native: false,
       device: 'desktop',
-      color: {
-        primary: '#39c',
-        secondary: '#33c'
-      },
+      color: themeConfig.defaultTheme,
       language: 'zh-chs'
     },
     popupMenu: {
