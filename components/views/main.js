@@ -15,17 +15,17 @@ import components from '../../components';
 import containers from '../../containers';
 
 let pages = {};
-Object.keys(containers.pages).forEach(key => 
+Object.keys(containers.pages).forEach(key =>
   pages[key] = React.createElement(
-  connect(containers.pages[key].mapStateToProps, containers.pages[key].mapDispatchToProps)
-  (components.pages[key].default), { key })
+    connect(containers.pages[key].mapStateToProps, containers.pages[key].mapDispatchToProps)
+      (components.pages[key].default), { key })
 );
 
 let dialogs = {};
-Object.keys(containers.dialogs).forEach(key => 
+Object.keys(containers.dialogs).forEach(key =>
   dialogs[key] = React.createElement(
-  connect(containers.dialogs[key].mapStateToProps, containers.dialogs[key].mapDispatchToProps)
-  (components.dialogs[key].default), { key })
+    connect(containers.dialogs[key].mapStateToProps, containers.dialogs[key].mapDispatchToProps)
+      (components.dialogs[key].default), { key })
 );
 
 const styles = theme => ({
@@ -53,9 +53,9 @@ class Main extends React.Component {
         {/* Views*/}
         <Fab />
         <Drawer />
-	{/* Pages */}
+        {/* Pages */}
         <div className={classes.main}>
-        {pages[this.props.page]}
+          {pages[this.props.page]}
         </div>
       </MuiThemeProvider>
     )

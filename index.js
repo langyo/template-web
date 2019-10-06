@@ -6,9 +6,13 @@ import { Provider } from 'react-redux';
 import Main from './containers/views/main';
 import store from './store';
 
-render(
-  <Provider store={store}>
-    <Main />
-  </Provider>,
-  document.getElementById('content')
-);
+try {
+  render(
+    <Provider store={store}>
+      <Main />
+    </Provider>,
+    document.getElementById('content')
+  );
+} catch (e) {
+  document.querySelector('#errorConsole').innerText += '\n' + e.toString();
+}

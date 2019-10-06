@@ -17,8 +17,7 @@ class Message extends React.Component {
     // Dispatcher
     onGenerate: PropTypes.func,
     // State
-    open: PropTypes.bool,
-    text: PropTypes.string
+    open: PropTypes.bool
   };
 
   render() {
@@ -28,10 +27,7 @@ class Message extends React.Component {
       <Fade in={this.props.open}>
         <div>
           <Paper>
-            <Button variant='outlined' onClick={this.props.onGenerate}>生成随机字符</Button>
-            <Typography variant='h6'>
-              {this.props.text}
-            </Typography>
+            <Button variant='outlined'>测试</Button>
           </Paper>
         </div>
       </Fade>

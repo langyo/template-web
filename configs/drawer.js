@@ -15,8 +15,7 @@ export default state => ([
     icon: <Icon path={mdiAccountCircleOutline} size={1} color={'#333'} />,
     badge: 'dot',
     text: {
-      primary: !state.data.account.hasLogin ? '未登录' : state.data.account.name,
-      secondary: !state.data.account.hasLogin ? '' : state.data.account.level
+      primary: '未登录'
     }
   },
   '------',
@@ -30,7 +29,7 @@ export default state => ([
     icon: <Icon path={mdiMessageText} size={1} color={'#333'} />,
     page: 'message',
     selected: ['message'],
-    badge: state.data.account.hasMessage ? state.data.account.messageCount : null,
+    badge: true,
     text: '消息'
   },
   '------',

@@ -17,8 +17,7 @@ class Main extends React.Component {
     // Dispatcher
     onToggleClipboard: PropTypes.func,
     // State
-    open: PropTypes.bool,
-    clipboard: PropTypes.string
+    open: PropTypes.bool
   };
 
   render() {
@@ -28,8 +27,7 @@ class Main extends React.Component {
       <Fade in={this.props.open}>
         <div>
           <Paper>
-            <Button onClick={this.props.onToggleClipboard} variant='outlined'>{'刷新以获取剪贴板文本'}</Button>
-            <Typography variant='h6'>{this.props.clipboard}</Typography>
+            <Typography variant='h6'>{'测试'}</Typography>
           </Paper>
         </div>
       </Fade>
