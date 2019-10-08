@@ -63,3 +63,6 @@ typings/
 # npm / yarn
 package-lock.json
 yarn.lock
+
+# swap
+.index.html.swp
